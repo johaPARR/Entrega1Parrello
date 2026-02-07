@@ -1,52 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Araperful</title>
+    
+    <link rel="stylesheet" href="css/style.css">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
-        rel="stylesheet">
-
-  <!-- Estilos internos -->
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      font-size: 18px;
-    }
-
-    h1 {
-      font-size: 28px;
-    }
-  </style>
-
-  <title>Simulador interactivo en JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
-  <header>
-    <h1>Simulador interactivo en JavaScript</h1>
-  </header>
+    <header>
+        <h1>Araperful - Mundo Artesanal</h1>
+    </header>
 
-  <!-- ================= MAIN ================= -->
-  <main>
-    <p>
-      Este simulador permite al usuario interactuar mediante cuadros de diálogo
-      utilizando JavaScript. La lógica del programa se ejecuta a través de
-      funciones, condicionales y ciclos, sin interacción directa con la página.
-    </p>
-  </main>
+    <main>
+        <p id="descripcion">
+            Bienvenido a Araperful. Selecciona los productos que desees agregar al carrito.
+        </p>
 
-  <!-- ================= FOOTER ================= -->
-  <footer>
-    <p>Proyecto académico - Entrega 1</p>
-  </footer>
+        <section id="contenedor-productos"></section>
 
-  <!-- ================= JAVASCRIPT ================= -->
-  <script src="js/main.js" defer></script>
+        <hr>
+
+        <section id="carrito">
+            <h2>Tu Carrito</h2>
+            <ul id="lista-carrito"></ul>
+            <p><strong>Total: $</strong><span id="total-precio">0</span></p>
+            
+            <button id="btn-vaciar">Vaciar Carrito</button>
+            <button id="btn-finalizar">Finalizar Compra</button>
+            
+            <button id="btn-pagar">Pagar</button>
+
+            <div id="opciones-pago" style="display: none; margin-top: 20px; border-top: 1px solid #ddd; padding-top: 10px;">
+                <h3>Seleccione método de pago:</h3>
+                <label>
+                    <input type="radio" name="metodo" value="Efectivo"> Efectivo (10% de descuento)
+                </label><br>
+                <label>
+                    <input type="radio" name="metodo" value="Tarjeta"> Tarjeta de Crédito (Hasta 3 cuotas)
+                </label><br>
+                <button id="btn-confirmar-pago" style="background-color: #2ecc71; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Confirmar Selección</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto académico - Entrega 2</p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
 </body>
 </html>
